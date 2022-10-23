@@ -1,0 +1,21 @@
+.__Button__ {
+  padding: 5px 20px;
+  outline: none;
+  border: none;
+  font-size: 20px;
+  border-radius: 5px;
+  background-color: var(--green-color);
+  color: #fff;
+  user-select: none;
+  cursor: pointer;
+  position: relative;
+  transition: 0.3s;
+
+}
+.__Button__:active {
+  transform: scale(90%);
+}
+
+.__Dangerous__ {
+  background-color: var(--red-color);
+}
