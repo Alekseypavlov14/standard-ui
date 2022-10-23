@@ -2,19 +2,16 @@ import React, { FC, ReactNode } from 'react'
 import './BackgroundLayer.css'
 
 interface BackgroundLayerProps {
-  onClick: () => void,
+  onClick: () => void
   children: ReactNode
 }
 
 export const BackgroundLayer: FC<BackgroundLayerProps> = ({
-  onClick, 
-  children 
+  onClick,
+  children,
 }) => {
   return (
-    <div 
-      className='__BackgroundLayer__'
-      onClick={onClick}
-    >
+    <div className="__BackgroundLayer__" onClick={onClick}>
       {children}
     </div>
   )

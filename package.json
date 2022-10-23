@@ -4,7 +4,8 @@
   "description": "UI Kit with standard components",
   "main": "./build/index.js",
   "scripts": {
-    "build": "webpack"
+    "build": "webpack",
+    "prettier": "npx prettier --write ./src/**/*.*"
   },
   "keywords": [],
   "author": "Aleksey Pavlov <aleshapavlov9@gmail.com>",

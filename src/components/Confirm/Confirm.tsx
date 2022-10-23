@@ -4,9 +4,9 @@ import { Modal } from '../Modal/Modal'
 import './Confirm.css'
 
 interface ConfirmProps {
-  children: string,
-  onConfirm: () => void,
-  onCancel?: () => void,
+  children: string
+  onConfirm: () => void
+  onCancel?: () => void
   close: () => void
 }
 
@@ -14,7 +14,7 @@ export const Confirm: FC<ConfirmProps> = ({
   children,
   onConfirm,
   onCancel,
-  close
+  close,
 }) => {
   const confirmHandler = () => {
     onConfirm()
@@ -27,12 +27,11 @@ export const Confirm: FC<ConfirmProps> = ({
   }
 
   return (
-    <Modal 
-      title={children}
-      close={close}
-    >
-      <div className='__Buttons__'>
-        <Button onClick={cancelHandler} dangerous>Cancel</Button>
+    <Modal title={children} close={close}>
+      <div className="__Buttons__">
+        <Button onClick={cancelHandler} dangerous>
+          Cancel
+        </Button>
         <Button onClick={confirmHandler}>Confirm</Button>
       </div>
     </Modal>

@@ -10,7 +10,6 @@
   cursor: pointer;
   position: relative;
   transition: 0.3s;
-
 }
 .__Button__:active {
   transform: scale(90%);
