@@ -4,7 +4,7 @@
   border: none;
   font-size: 20px;
   border-radius: 5px;
-  background-color: rgb(38, 185, 38);
+  background-color: var(--blue-color);
   color: #fff;
   user-select: none;
   cursor: pointer;
@@ -15,6 +15,8 @@
   transform: scale(90%);
 }
 
-.__Dangerous__ {
-  background-color: rgb(255, 115, 115);
+.__Outlined__ {
+  background-color: #fff;
+  color: var(--blue-color);
+  border-radius: 1px solid var(--blue-color);
 }
