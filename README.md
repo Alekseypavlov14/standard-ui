@@ -2,6 +2,7 @@
 
 ### At the moment, there are:
 * Button
+* Date
 * Modal
 * Confirm
 

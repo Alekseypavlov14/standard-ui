@@ -4,9 +4,10 @@
   "description": "UI Kit with standard components",
   "main": "./build/index.js",
   "scripts": {
+    "dev": "webpack --watch",
     "build": "webpack",
     "prettier": "npx prettier --write ./src/**/*.*",
-    "prepublish": "npm run build"
+    "prepublish": "npm run build && npm version patch"
   },
   "keywords": [
     "React",
