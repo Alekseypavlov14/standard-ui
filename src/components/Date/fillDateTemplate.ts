@@ -1,6 +1,6 @@
-import { Country } from "./Country.type"
-import { parseTime } from "./parseTime"
-import { timeFormatMap } from "./timeFormatMap"
+import { Country } from './Country.type'
+import { parseTime } from './parseTime'
+import { timeFormatMap } from './timeFormatMap'
 
 export function fillDateTemplate(time: number, country: Country) {
   const { day, month, year } = parseTime(time)
