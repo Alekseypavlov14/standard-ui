@@ -7,7 +7,7 @@
     "dev": "webpack --watch",
     "build": "webpack",
     "prettier": "npx prettier --write ./src/**/*.*",
-    "prepublish": "npm run build && npm version patch"
+    "prepublish": "npm run build"
   },
   "keywords": [
     "React",
