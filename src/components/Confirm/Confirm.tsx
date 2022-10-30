@@ -6,14 +6,14 @@ import { Modal } from '../Modal/Modal'
 import './Confirm.css'
 
 interface ConfirmProps extends CustomizationProvider {
-  children: string
+  title: string
   onConfirm: () => void
   onCancel?: () => void
   close: () => void
 }
 
 export const Confirm: FC<ConfirmProps> = ({
-  children,
+  title,
   onConfirm,
   onCancel,
   close,
@@ -31,7 +31,7 @@ export const Confirm: FC<ConfirmProps> = ({
 
   return (
     <ThemeProvider>
-      <Modal title={children} close={close} className={className}>
+      <Modal title={title} close={close} className={className}>
         <div className="__Buttons__">
           <Button onClick={cancelHandler} outlined>
             Cancel
