@@ -1,4 +1,5 @@
 import React, { FC, ReactNode } from 'react'
+import { ThemeProvider } from '../../features/ThemeProvider/ThemeProvider'
 import './BackgroundLayer.css'
 
 interface BackgroundLayerProps {
@@ -11,8 +12,10 @@ export const BackgroundLayer: FC<BackgroundLayerProps> = ({
   children,
 }) => {
   return (
-    <div className="__BackgroundLayer__" onClick={onClick}>
-      {children}
-    </div>
+    <ThemeProvider>
+      <div className="__BackgroundLayer__" onClick={onClick}>
+        {children}
+      </div>
+    </ThemeProvider>
   )
 }

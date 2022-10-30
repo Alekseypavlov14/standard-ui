@@ -1,0 +1,11 @@
+.__ThemeProvider__ {
+  --grey-dark-color: #333;
+
+  --blue-color: rgb(17, 121, 219);
+  --blue-dark-color: rgb(7, 72, 133);
+}
+
+.__ThemeProvider__ div,
+.__ThemeProvider__ span {
+  color: var(--grey-dark-color);
+}
