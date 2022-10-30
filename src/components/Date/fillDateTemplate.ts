@@ -1,13 +1,13 @@
-import { Country } from './Country.type'
+import { Region } from './Region.type'
 import { parseTime } from './parseTime'
 import { timeFormatMap } from './timeFormatMap'
 
-export function fillDateTemplate(time: number, country: Country) {
+export function fillDateTemplate(time: number, region: Region) {
   const { day, month, year } = parseTime(time)
 
-  if (!timeFormatMap[country]) country = 'Europe'
+  if (!timeFormatMap[region]) region = 'Europe'
 
-  return timeFormatMap[country]
+  return timeFormatMap[region]
     .replace(/DD/, day)
     .replace(/MM/, month)
     .replace(/YY/, year)

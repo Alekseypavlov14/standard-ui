@@ -1,7 +1,7 @@
-import { Country } from './Country.type'
+import { Region } from './Region.type'
 
 type timeFormatMap = {
-  [key in Country]: string
+  [key in Region]: string
 }
 
 export const timeFormatMap: timeFormatMap = {

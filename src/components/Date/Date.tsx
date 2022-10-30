@@ -2,21 +2,17 @@ import React, { FC } from 'react'
 import { CustomizationProvider } from '../../features/CustomizationProvider/CustomizationProvider'
 import { ThemeProvider } from '../../features/ThemeProvider/ThemeProvider'
 import { fillDateTemplate } from './fillDateTemplate'
-import { Country } from './Country.type'
+import { Region } from './Region.type'
 import cn from 'classnames'
 import './Date.css'
 
 interface DateProps extends CustomizationProvider {
   time: number
-  country?: Country
+  region?: Region
 }
 
-export const Date: FC<DateProps> = ({
-  time,
-  country = 'Europe',
-  className,
-}) => {
-  const dateView = fillDateTemplate(time, country)
+export const Date: FC<DateProps> = ({ time, region = 'Europe', className }) => {
+  const dateView = fillDateTemplate(time, region)
 
   return (
     <ThemeProvider>
