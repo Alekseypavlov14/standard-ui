@@ -18,5 +18,5 @@
 .__Outlined__ {
   background-color: #fff;
   color: var(--blue-color);
-  border-radius: 1px solid var(--blue-color);
+  border: 1px solid var(--blue-color);
 }
