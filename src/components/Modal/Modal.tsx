@@ -8,18 +8,18 @@ import './Modal.css'
 interface ModalProps extends CustomizationProvider {
   title: string
   children?: ReactNode
-  close: () => void
+  onClose: () => void
 }
 
 export const Modal: FC<ModalProps> = ({
   title,
   children,
-  close,
+  onClose,
   className,
 }) => {
   return (
     <ThemeProvider>
-      <BackgroundLayer onClick={close}>
+      <BackgroundLayer onClick={onClose}>
         <div className={cn('__Modal__', className)}>
           <div className="__Title__">{title}</div>
           {children}

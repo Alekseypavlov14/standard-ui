@@ -9,29 +9,29 @@ interface ConfirmProps extends CustomizationProvider {
   title: string
   onConfirm: () => void
   onCancel?: () => void
-  close: () => void
+  onClose: () => void
 }
 
 export const Confirm: FC<ConfirmProps> = ({
   title,
   onConfirm,
   onCancel,
-  close,
+  onClose,
   className,
 }) => {
   const confirmHandler = () => {
     onConfirm()
-    close()
+    onClose()
   }
 
   const cancelHandler = () => {
     if (onCancel) onCancel()
-    close()
+    onClose()
   }
 
   return (
     <ThemeProvider>
-      <Modal title={title} close={close} className={className}>
+      <Modal title={title} onClose={onClose} className={className}>
         <div className="__Buttons__">
           <Button onClick={cancelHandler} outlined>
             Cancel

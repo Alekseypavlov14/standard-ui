@@ -1,0 +1,42 @@
+.__BurgerButton__ {
+  display: flex;
+  position: relative;
+  width: 30px;
+  height: 18px;
+  flex-direction: column;
+  justify-content: space-between;
+  z-index: 10;
+}
+
+.__BurgerButton__::before,
+.__BurgerButton__::after {
+  content: '';
+  height: 2px;
+  width: 100%;
+  transform-origin: center;
+  transition: transform 0.3s ease 0s;
+}
+
+.__BurgerButton__ span,
+.__BurgerButton__::after,
+.__BurgerButton__::before {
+  background: var(--blue-color);
+}
+
+.__BurgerButton__ span {
+  height: 2px;
+  width: 100%;
+}
+
+.__BurgerButton__.__Clicked__ span {
+  visibility: hidden;
+  opacity: 0;
+}
+
+.__BurgerButton__.__Clicked__::before {
+  transform: translateY(8px) rotate(45deg);
+}
+
+.__BurgerButton__.__Clicked__::after {
+  transform: translateY(-8px) rotate(-45deg);
+}
