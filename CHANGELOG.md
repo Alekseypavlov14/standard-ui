@@ -1,3 +1,7 @@
+## Version 0.4.1
+
+* Change **BurgerButton** component. Remove the state and add **isOpened** flag
+
 ## Version 0.4.0
 
 * Add **BurgerButton** component

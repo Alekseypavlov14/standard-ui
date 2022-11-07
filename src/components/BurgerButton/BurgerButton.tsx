@@ -5,43 +5,24 @@ import cn from 'classnames'
 import './BurgerButton.css'
 
 interface BurgerButtonProps extends CustomizationProvider {
-  onOpen: () => void
-  onClose: () => void
-  initialOpened?: boolean
+  isOpened: boolean
+  onClick: () => void
 }
 
 export const BurgerButton: FC<BurgerButtonProps> = ({
-  onOpen,
-  onClose,
-  initialOpened,
+  isOpened,
+  onClick,
   className,
 }) => {
-  const [isOpened, setOpened] = useState<boolean>(Boolean(initialOpened))
-
-  const toggleClicked = () => {
-    setOpened(isOpened => !isOpened)
-  }
-
-  const modifier = isOpened && '__Clicked__'
-
-  const openHandler = () => {
-    toggleClicked()
-    onOpen()
-  }
-
-  const closeHandler = () => {
-    toggleClicked()
-    onClose()
-  }
-
-  const actualHandler = isOpened ? closeHandler : openHandler
+  const classNames = cn(
+    '__BurgerButton__',
+    isOpened && '__Clicked__',
+    className
+  )
 
   return (
     <ThemeProvider>
-      <div
-        className={cn('__BurgerButton__', modifier, className)}
-        onClick={actualHandler}
-      >
+      <div className={classNames} onClick={onClick}>
         <span />
       </div>
     </ThemeProvider>
