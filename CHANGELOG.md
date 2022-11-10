@@ -1,3 +1,7 @@
+## Version 0.4.2
+
+* fix bug with Button styles
+
 ## Version 0.4.1
 
 * Change **BurgerButton** component. Remove the state and add **isOpened** flag
