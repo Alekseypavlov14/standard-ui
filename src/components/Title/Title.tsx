@@ -11,9 +11,5 @@ interface TitleProps extends CustomizationProvider {
 export const Title: FC<TitleProps> = ({ children, bold, className }) => {
   const classNames = cn('__Title__', bold && '__Bold__', className)
 
-  return (
-    <div className={classNames}>
-      {children}
-    </div>
-  )
+  return <div className={classNames}>{children}</div>
 }

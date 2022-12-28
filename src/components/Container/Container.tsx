@@ -8,9 +8,5 @@ interface ContainerProps extends CustomizationProvider {
 }
 
 export const Container: FC<ContainerProps> = ({ children, className }) => {
-  return (
-    <div className={cn('__Container__', className)}>
-      {children}
-    </div>
-  )
+  return <div className={cn('__Container__', className)}>{children}</div>
 }
