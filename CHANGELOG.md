@@ -1,3 +1,7 @@
+## Version 0.5.0
+
+* Add **Input**, **Container** and **Title** components
+
 ## Version 0.4.2
 
 * fix bug with Button styles
