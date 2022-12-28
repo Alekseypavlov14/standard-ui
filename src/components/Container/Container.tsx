@@ -1,7 +1,7 @@
 import React, { FC, ReactNode } from 'react'
 import { CustomizationProvider } from '../../features/CustomizationProvider/CustomizationProvider'
 import cn from 'classnames'
-import  './Container.css'
+import './Container.css'
 
 interface ContainerProps extends CustomizationProvider {
   children: ReactNode
