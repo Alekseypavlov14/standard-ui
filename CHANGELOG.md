@@ -1,3 +1,7 @@
+## Version 0.5.1
+
+* Add required **isShown** flag to Modal and Confirm
+
 ## Version 0.5.0
 
 * Add **Input**, **Container** and **Title** components

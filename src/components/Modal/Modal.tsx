@@ -8,19 +8,26 @@ import './Modal.css'
 interface ModalProps extends CustomizationProvider {
   title: string
   children?: ReactNode
+  isShown: boolean
   onClose: () => void
 }
 
 export const Modal: FC<ModalProps> = ({
   title,
   children,
+  isShown,
   onClose,
   className,
 }) => {
+  const classNames = cn('__Modal__', !isShown && '__Modal-Hidden__', className)
+
   return (
     <ThemeProvider>
-      <BackgroundLayer onClick={onClose}>
-        <div className={cn('__Modal__', className)}>
+      <BackgroundLayer 
+        onClick={onClose} 
+        isShown={isShown}
+      >
+        <div className={classNames}>
           <div className="__Title__">{title}</div>
           {children}
         </div>

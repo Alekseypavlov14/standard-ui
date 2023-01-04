@@ -7,6 +7,7 @@ import './Confirm.css'
 
 interface ConfirmProps extends CustomizationProvider {
   title: string
+  isShown: boolean
   onConfirm: () => void
   onCancel?: () => void
   onClose: () => void
@@ -14,6 +15,7 @@ interface ConfirmProps extends CustomizationProvider {
 
 export const Confirm: FC<ConfirmProps> = ({
   title,
+  isShown,
   onConfirm,
   onCancel,
   onClose,
@@ -31,7 +33,12 @@ export const Confirm: FC<ConfirmProps> = ({
 
   return (
     <ThemeProvider>
-      <Modal title={title} onClose={onClose} className={className}>
+      <Modal 
+        isShown={isShown} 
+        title={title} 
+        onClose={onClose} 
+        className={className}
+      >
         <div className="__Buttons__">
           <Button onClick={cancelHandler} outlined>
             Cancel
