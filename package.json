@@ -1,6 +1,6 @@
 {
   "name": "standard-ui",
-  "version": "0.5.0",
+  "version": "0.5.1",
   "description": "UI Kit with standard components",
   "main": "./build/index.js",
   "scripts": {
