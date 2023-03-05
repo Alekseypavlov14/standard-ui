@@ -7,6 +7,7 @@
     "dev": "webpack --watch",
     "build": "webpack",
     "prettier": "npx prettier --write ./src/**/*.*",
+    "publish": "npm publish",
     "prepublish": "npm run build"
   },
   "keywords": [
