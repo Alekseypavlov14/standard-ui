@@ -1,12 +1,14 @@
 import React, { FC, ReactNode } from 'react'
-import { CustomizationProvider } from '../../features/CustomizationProvider/CustomizationProvider'
 import cn from 'classnames'
 import './Container.css'
 
-interface ContainerProps extends CustomizationProvider {
+interface ContainerProps {
   children: ReactNode
+  className?: string
 }
 
 export const Container: FC<ContainerProps> = ({ children, className }) => {
-  return <div className={cn('__Container__', className)}>{children}</div>
+  const classNames = cn('__Container__', className)
+
+  return <div className={classNames}>{children}</div>
 }

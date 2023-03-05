@@ -1,14 +1,15 @@
 import React, { FC, InputHTMLAttributes } from 'react'
-import { CustomizationProvider } from '../../features/CustomizationProvider/CustomizationProvider'
 import cn from 'classnames'
 import './Input.css'
 
-interface InputProps extends CustomizationProvider, InputHTMLAttributes<HTMLInputElement> {}
+interface InputProps extends InputHTMLAttributes<HTMLInputElement> {}
 
 export const Input: FC<InputProps> = ({ className, ...props }) => {
+  const classNames = cn('__Input__', className)
+
   return (
     <input 
-      className={cn('__Input__', className)}
+      className={classNames}
       {...props}
     />
   )

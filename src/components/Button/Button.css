@@ -4,18 +4,15 @@
   border: none;
   font-size: 20px;
   border-radius: 5px;
-  background-color: var(--blue-color);
+  background-color: rgb(17, 121, 219);
   color: #fff;
   user-select: none;
   cursor: pointer;
   transition: 0.3s;
 }
-.__Button__:active {
-  transform: scale(90%);
-}
 
 .__Outlined__ {
   background-color: #fff;
-  color: var(--blue-color);
-  border: 1px solid var(--blue-color);
+  color: rgb(17, 121, 219);
+  border: 1px solid rgb(17, 121, 219);
 }

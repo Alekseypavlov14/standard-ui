@@ -11,6 +11,7 @@
 .__BurgerButton__::before,
 .__BurgerButton__::after {
   content: '';
+  background: inherit;
   height: 2px;
   width: 100%;
   transform-origin: center;
@@ -20,7 +21,7 @@
 .__BurgerButton__ span,
 .__BurgerButton__::after,
 .__BurgerButton__::before {
-  background: var(--blue-color);
+  background: rgb(17, 121, 219);
 }
 
 .__BurgerButton__ span {

@@ -1,12 +1,11 @@
-import React, { FC, useState } from 'react'
-import { CustomizationProvider } from '../../features/CustomizationProvider/CustomizationProvider'
-import { ThemeProvider } from '../../features/ThemeProvider/ThemeProvider'
+import React, { FC } from 'react'
 import cn from 'classnames'
 import './BurgerButton.css'
 
-interface BurgerButtonProps extends CustomizationProvider {
+interface BurgerButtonProps {
   isOpened: boolean
   onClick: () => void
+  className?: string
 }
 
 export const BurgerButton: FC<BurgerButtonProps> = ({
@@ -21,10 +20,11 @@ export const BurgerButton: FC<BurgerButtonProps> = ({
   )
 
   return (
-    <ThemeProvider>
-      <div className={classNames} onClick={onClick}>
-        <span />
-      </div>
-    </ThemeProvider>
+    <div 
+      className={classNames} 
+      onClick={onClick}  
+    >
+      <span />
+    </div>
   )
 }

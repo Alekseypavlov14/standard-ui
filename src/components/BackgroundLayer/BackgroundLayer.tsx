@@ -1,5 +1,4 @@
 import React, { FC, ReactNode } from 'react'
-import { ThemeProvider } from '../../features/ThemeProvider/ThemeProvider'
 import './BackgroundLayer.css'
 import cn from 'classnames'
 
@@ -11,19 +10,20 @@ interface BackgroundLayerProps {
 
 export const BackgroundLayer: FC<BackgroundLayerProps> = ({
   onClick,
+  isShown,
   children,
-  isShown
 }) => {
-  const classNames = cn("__BackgroundLayer__", !isShown && '__BackgroundLayer-Hidden__')
+  const classNames = cn(
+    "__BackgroundLayer__", 
+    !isShown && '__BackgroundLayer-Hidden__'
+  )
 
   return (
-    <ThemeProvider>
-      <div 
-        className={classNames} 
-        onClick={onClick}
-      >
-        {children}
-      </div>
-    </ThemeProvider>
+    <div 
+      className={classNames} 
+      onClick={onClick}
+    >
+      {children}
+    </div>
   )
 }

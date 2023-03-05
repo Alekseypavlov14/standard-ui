@@ -1,4 +1,4 @@
-import { Region } from './Region.type'
+import { Region } from '../types/Region'
 
 type timeFormatMap = {
   [key in Region]: string

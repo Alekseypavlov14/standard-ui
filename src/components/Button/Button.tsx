@@ -1,28 +1,26 @@
-import React, { FC, MouseEvent } from 'react'
-import { CustomizationProvider } from '../../features/CustomizationProvider/CustomizationProvider'
-import { ThemeProvider } from '../../features/ThemeProvider/ThemeProvider'
+import React, { FC, ButtonHTMLAttributes } from 'react'
 import cn from 'classnames'
 import './Button.css'
 
-interface ButtonProps extends CustomizationProvider {
-  children: string
-  onClick: (e: MouseEvent<HTMLButtonElement>) => void
+interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
   outlined?: boolean
 }
 
 export const Button: FC<ButtonProps> = ({
-  children,
-  onClick,
   outlined,
   className,
+  ...props
 }) => {
+  const classNames = cn(
+    '__Button__', 
+    outlined && '__Outlined__', 
+    className
+  )
+
   return (
-    <ThemeProvider>
-      <button
-        className={cn('__Button__', outlined && '__Outlined__', className)}
-        onClick={onClick}
-        children={children}
-      />
-    </ThemeProvider>
+    <button
+      className={classNames}
+      {...props}
+    />
   )
 }

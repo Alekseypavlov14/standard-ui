@@ -1,3 +1,8 @@
+## Version 0.5.2
+
+* Changed **Button** interface
+* Refactored components
+
 ## Version 0.5.1
 
 * Add required **isShown** flag to Modal and Confirm
